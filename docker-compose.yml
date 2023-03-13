@@ -4,12 +4,14 @@ services:
   server:
     container_name: pair_programming_timer_web
     image: node:19
+    user: node
     environment:
       - NODE_ENV=dev
     ports:
-      - "7778:3000"
+      - "3000:3000"
     volumes:
-      - ./app/:/home/app
+      - ./app/:/home/app:rw
     working_dir: /home/app
 #    tty: true
+#    command: bash -c "WDS_SOCKET_PORT=0 npm run start"
     command: bash -c "npm run start"
