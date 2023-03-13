@@ -1,0 +1,15 @@
+version: "3.8"
+
+services:
+  server:
+    container_name: pair_programming_timer_web
+    image: node:19
+    environment:
+      - NODE_ENV=dev
+    ports:
+      - "7778:3000"
+    volumes:
+      - ./app/:/home/app
+    working_dir: /home/app
+#    tty: true
+    command: bash -c "npm run start"

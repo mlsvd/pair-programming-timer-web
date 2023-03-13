@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pair programming timer</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css?v=1.0">
+
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script type="module" src="/main.js"></script>
+</head>
+<body class="text-center">
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+    <header class="masthead mb-auto">
+
+    </header>
+
+    <main role="main" class="inner cover">
+        <div class="center">
+            <h3 class="center"><img src="" width="164px" alt=" timer"/>
+            </h3>
+        </div>
+        <h1 class="cover-heading" id="timer-title">Countdown</h1>
+        <div id="counter-value-placeholder">
+            <center>
+                <table>
+                    <tr>
+                        <td><label><input class="form-radio" type="radio" name="count-value" value="1"> 1 min</label>
+                        </td>
+                        <td><label><input class="form-radio" type="radio" name="count-value" value="10"> 10 min</label>
+                        </td>
+                        <td><label><input class="form-radio" type="radio" name="count-value" value="50" checked="true">
+                            50 min</label></td>
+                        <td><label><input class="form-radio" type="radio" name="count-value" value="60"> 1 hour</label>
+                        </td>
+                    </tr>
+                </table>
+            </center>
+        </div>
+        <p id="time-input-placeholder" class="time-left time-to-countdown-input hidden">
+            <input type="text" id="hours" class="txt-shadow" name="hours" value="00"/>:<input type="text" id="minutes"
+                                                                                              class="txt-shadow"
+                                                                                              name="minutes"
+                                                                                              value="00"/>:<input
+                type="text" id="seconds" class="txt-shadow" name="seconds" value="00"/>
+        </p>
+        <p id="time-left-placeholder" class="time-left">
+            00:00
+        </p>
+        <p class="lead">
+            <button id="start-button" class="timer-button play-btn"><span>Start</span></button>
+            <button id="pause-button" class="timer-button pause-btn hidden"><span>Pause</span></button>
+            <button id="continue-button" class="timer-button play-btn hidden"><span>Continue</span></button>
+            <button id="reset-button" class="timer-button stop-btn play-btn hidden"><span>Reset</span></button>
+        </p>
+    </main>
+
+    <footer class="footer mt-auto">
+        <div class="inner">
+            v0.1
+        </div>
+    </footer>
+</div>
+
+</body>
+</html>
