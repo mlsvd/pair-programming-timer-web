@@ -5,9 +5,9 @@ import TimerControls from './components/TimerControls';
 
 function App() {
   return (
-    <div className="App">
+    <main role="main" className="App inner cover">
       <Timer />
-    </div>
+    </main>
   );
 }
 

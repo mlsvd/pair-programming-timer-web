@@ -8,8 +8,8 @@ class TimerControls extends React.Component {
         if (this.props.status === 'paused') {
             return (
                 <p className="lead">
-                    <button id="continue-button" onClick={() => this.props.onContinueTimer()} className="timer-button play-btn hidden"><span>Continue</span></button>
-                    <button id="reset-button" onClick={() => this.props.onResetTimer()} className="timer-button stop-btn play-btn hidden"><span>Reset</span></button>
+                    <button id="continue-button" onClick={() => this.props.onContinueTimer()} className="timer-button play-btn"><span>Continue</span></button>
+                    <button id="reset-button" onClick={() => this.props.onResetTimer()} className="timer-button stop-btn play-btn"><span>Reset</span></button>
                 </p>
             );
         }
@@ -17,8 +17,8 @@ class TimerControls extends React.Component {
         if (this.props.status === 'started') {
             return (
                 <p className="lead">
-                    <button id="pause-button" onClick={() => this.props.onPauseTimer()} className="timer-button pause-btn hidden"><span>Pause</span></button>
-                    <button id="reset-button" onClick={() => this.props.onResetTimer()} className="timer-button stop-btn play-btn hidden"><span>Reset</span></button>
+                    <button id="pause-button" onClick={() => this.props.onPauseTimer()} className="timer-button pause-btn"><span>Pause</span></button>
+                    <button id="reset-button" onClick={() => this.props.onResetTimer()} className="timer-button stop-btn play-btn"><span>Reset</span></button>
                 </p>
             );
         }
@@ -26,7 +26,7 @@ class TimerControls extends React.Component {
         if (this.props.status === 'finished') {
             return (
                 <p className="lead">
-                    <button id="reset-button" onClick={() => this.props.onResetTimer()} className="timer-button stop-btn play-btn hidden"><span>Reset</span></button>
+                    <button id="reset-button" onClick={() => this.props.onResetTimer()} className="timer-button stop-btn play-btn"><span>Reset</span></button>
                 </p>
             );
         }
