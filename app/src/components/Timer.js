@@ -94,7 +94,7 @@ class Timer extends React.Component {
 
     render() {
         return (
-            <div>
+            <div id="counter-value-placeholder">
                 <TimerDisplay timerDisplayValue={this.state.timerDisplayValue} />
                 <TimerControls status={this.state.status}
                     onStartTimer={() => this.startTimer()}

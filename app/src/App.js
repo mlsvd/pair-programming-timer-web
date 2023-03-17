@@ -5,9 +5,13 @@ import TimerControls from './components/TimerControls';
 
 function App() {
   return (
-    <main role="main" className="App inner cover">
-      <Timer />
-    </main>
+      <div className="text-center">
+        <div className="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+            <main role="main" className="App inner cover">
+                <Timer />
+            </main>
+        </div>
+      </div>
   );
 }
 
