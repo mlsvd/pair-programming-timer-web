@@ -1,19 +1,21 @@
 import React from "react";
 import TimerDisplay from "./TimerDisplay";
 import TimerControls from './TimerControls';
+import TimerOptions from "./TimerOptions";
 
 class Timer extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             status: 'default',
-            timeSelected: 5,
-            currentSecond: 5,
+            countdownTimeInSeconds: 600,
+            currentSecond: 600,
             timerDisplayValue: '--:--',
             intervalRef: null
         }
     }
     startTimer() {
+        this.setState({currentSecond: this.state.countdownTimeInSeconds});
         this.setState({status: 'started'});
         this.startTicking();
     }
@@ -23,7 +25,7 @@ class Timer extends React.Component {
     resetTimer() {
         this.setState({status: 'default'});
         this.stopTicking();
-        this.setState({currentSecond: 5});
+        this.setState({currentSecond: this.state.countdownTimeInSeconds});
         this.setState({timerDisplayValue: '--:--'});
 
     }
@@ -92,10 +94,17 @@ class Timer extends React.Component {
         };
     }
 
+    changeCountdownTimeInSeconds(seconds) {
+        console.log(seconds);
+        this.setState({countdownTimeInSeconds: seconds});
+        this.setState({currentSecond: this.state.countdownTimeInSeconds});
+    }
+
     render() {
         return (
             <div id="counter-value-placeholder">
                 <TimerDisplay timerDisplayValue={this.state.timerDisplayValue} />
+                <TimerOptions onCountdownTimeChange={(seconds) => this.changeCountdownTimeInSeconds(seconds)} timeframeSelectedInSeconds={this.state.timeframeSelectedInSeconds} />
                 <TimerControls status={this.state.status}
                     onStartTimer={() => this.startTimer()}
                     onPauseTimer={() => this.pauseTimer()}
