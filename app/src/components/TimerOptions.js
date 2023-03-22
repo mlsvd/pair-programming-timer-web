@@ -4,7 +4,7 @@ class TimerOptions extends React.Component {
         super(props);
     }
     render() {
-        if (this.props.status === 'default' || this.props.status === 'finished') {
+        if (this.props.status === 'default') {
             return (
                 <div id="counter-value-placeholder">
                     <center>

@@ -259,3 +259,25 @@ label
   margin: 6px;
   padding: 6px;
 }
+
+.pulsate {
+  transform: scale(1);
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.90);
+    color: #fff;
+  }
+
+  70% {
+    transform: scale(1.2);
+    color: #FDDD5B;
+  }
+
+  100% {
+    transform: scale(0.90);
+    color: #fff;
+  }
+}
