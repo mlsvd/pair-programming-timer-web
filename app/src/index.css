@@ -10,22 +10,3 @@ body {
 body * {
   text-shadow: 1px 1px #666;
 }
-
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
-#counter-value-placeholder label{
-  /*display: flex;*/
-  justify-content: center;
-  align-content: center;
-}
-
-@media screen and (max-width: 800px) {
-  #counter-value-placeholder label {
-    display: flex;
-    flex-direction: row;
-  }
-}

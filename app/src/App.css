@@ -40,7 +40,6 @@
 @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css);
 
 body, html {
-  /*background-image: url('../image/bg.png');*/
   background-image: linear-gradient(to bottom right, #FF7705, #FDDD5B);
 }
 
@@ -279,5 +278,23 @@ label
   100% {
     transform: scale(0.90);
     color: #fff;
+  }
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  monospace;
+}
+
+#counter-value-placeholder label{
+  /*display: flex;*/
+  justify-content: center;
+  align-content: center;
+}
+
+@media screen and (max-width: 800px) {
+  #counter-value-placeholder label {
+    display: flex;
+    flex-direction: row;
   }
 }
