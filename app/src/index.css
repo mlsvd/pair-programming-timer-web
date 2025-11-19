@@ -8,5 +8,5 @@ body {
 }
 
 body * {
-  text-shadow: 1px 1px #666;
+  text-shadow: var(--textShadow);
 }
