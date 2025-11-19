@@ -105,12 +105,19 @@ class Timer extends React.Component {
         return (
             <div id="counter-value-placeholder">
                 <TimerDisplay currentSecond={this.state.currentSecond} timerDisplayValue={this.state.timerDisplayValue} />
-                <TimerOptions status={this.state.status} onCountdownTimeChange={(seconds) => this.changeCountdownTimeInSeconds(seconds)} timeframeSelectedInSeconds={this.state.timeframeSelectedInSeconds} />
-                <TimerControls status={this.state.status}
+                <TimerOptions
+                    status={this.state.status}
+                    onCountdownTimeChange={(seconds) => this.changeCountdownTimeInSeconds(seconds)}
+                    timeframeSelectedInSeconds={this.state.timeframeSelectedInSeconds}
+                    translations={this.props.translations}
+                />
+                <TimerControls
+                    status={this.state.status}
                     onStartTimer={() => this.startTimer()}
                     onPauseTimer={() => this.pauseTimer()}
                     onResetTimer={() => this.resetTimer()}
                     onContinueTimer={() => this.continueTimer()}
+                    translations={this.props.translations}
                 />
             </div>
         );

@@ -5,11 +5,13 @@ class TimerControls extends React.Component {
         console.log(1);
     }
     render() {
+        const t = this.props.translations.buttons;
+
         if (this.props.status === 'paused') {
             return (
                 <p className="lead">
-                    <button id="continue-button" onClick={() => this.props.onContinueTimer()} className="timer-button play-btn"><span>Continue</span></button>
-                    <button id="reset-button" onClick={() => this.props.onResetTimer()} className="timer-button stop-btn play-btn"><span>Reset</span></button>
+                    <button id="continue-button" onClick={() => this.props.onContinueTimer()} className="timer-button play-btn"><span>{t.continue}</span></button>
+                    <button id="reset-button" onClick={() => this.props.onResetTimer()} className="timer-button stop-btn play-btn"><span>{t.reset}</span></button>
                 </p>
             );
         }
@@ -17,8 +19,8 @@ class TimerControls extends React.Component {
         if (this.props.status === 'started') {
             return (
                 <p className="lead">
-                    <button id="pause-button" onClick={() => this.props.onPauseTimer()} className="timer-button pause-btn"><span>Pause</span></button>
-                    <button id="reset-button" onClick={() => this.props.onResetTimer()} className="timer-button stop-btn play-btn"><span>Reset</span></button>
+                    <button id="pause-button" onClick={() => this.props.onPauseTimer()} className="timer-button pause-btn"><span>{t.pause}</span></button>
+                    <button id="reset-button" onClick={() => this.props.onResetTimer()} className="timer-button stop-btn play-btn"><span>{t.reset}</span></button>
                 </p>
             );
         }
@@ -26,14 +28,14 @@ class TimerControls extends React.Component {
         if (this.props.status === 'finished') {
             return (
                 <p className="lead">
-                    <button id="reset-button" onClick={() => this.props.onResetTimer()} className="timer-button stop-btn play-btn"><span>Reset</span></button>
+                    <button id="reset-button" onClick={() => this.props.onResetTimer()} className="timer-button stop-btn play-btn"><span>{t.reset}</span></button>
                 </p>
             );
         }
 
         return (
             <p className="lead">
-                <button id="start-button" onClick={() => this.props.onStartTimer()} className="timer-button play-btn"><span>Start</span></button>
+                <button id="start-button" onClick={() => this.props.onStartTimer()} className="timer-button play-btn"><span>{t.start}</span></button>
             </p>
         );
     }
