@@ -49,6 +49,7 @@ body {
   box-shadow: var(--bodyBoxShadow);
   overflow-x: hidden;
   width: 100%;
+  overflow-y: auto;
 }
 
 .txt-shadow {

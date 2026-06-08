@@ -1,6 +1,6 @@
 const translations = {
     en: {
-        title: "Pair Programming Timer",
+        title: "Pair Programming Timekeeper",
         timer: {
             oneMin: "1 min",
             tenMin: "10 min",
@@ -16,7 +16,7 @@ const translations = {
         },
         help: {
             link: "Help / About",
-            title: "Pair Programming Timer",
+            title: "Pair Programming Timekeeper",
             paragraph1: "The app offers flexible time intervals catering to the dynamic nature of pair programming sessions.",
             paragraph2: "Users can choose from intervals of 1 minute, 10 minutes, 50 minutes, and 1 hour to structure their collaborative coding sessions.",
             paragraph3: "Pair programming sessions often benefit from periodic breaks to maintain productivity and engagement.",
@@ -27,7 +27,7 @@ const translations = {
         }
     },
     ja: {
-        title: "Pair Programming Timer",
+        title: "ペアプログラミングタイムキーパー",
         timer: {
             oneMin: "1分",
             tenMin: "10分",
@@ -43,7 +43,7 @@ const translations = {
         },
         help: {
             link: "ヘルプ / 概要",
-            title: "Pair Programming Timer",
+            title: "ペアプログラミングタイムキーパー",
             paragraph1: "このアプリは、ペアプログラミングセッションの動的な性質に対応する柔軟な時間間隔を提供します。",
             paragraph2: "ユーザーは1分、10分、50分、1時間の間隔から選択して、共同コーディングセッションを構成できます。",
             paragraph3: "ペアプログラミングセッションは、生産性とエンゲージメントを維持するために定期的な休憩から恩恵を受けることがよくあります。",
@@ -54,7 +54,7 @@ const translations = {
         }
     },
     it: {
-        title: "Pair Programming Timer",
+        title: "Cronometro per Pair Programming",
         timer: {
             oneMin: "1 min",
             tenMin: "10 min",
@@ -70,7 +70,7 @@ const translations = {
         },
         help: {
             link: "Aiuto / Informazioni",
-            title: "Pair Programming Timer",
+            title: "Cronometro per Pair Programming",
             paragraph1: "L'app offre intervalli di tempo flessibili che si adattano alla natura dinamica delle sessioni di pair programming.",
             paragraph2: "Gli utenti possono scegliere tra intervalli di 1 minuto, 10 minuti, 50 minuti e 1 ora per strutturare le loro sessioni di codifica collaborativa.",
             paragraph3: "Le sessioni di pair programming spesso beneficiano di pause periodiche per mantenere la produttività e l'impegno.",
