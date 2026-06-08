@@ -1,11 +1,12 @@
 const translations = {
     en: {
-        title: "Pair Programming Timekeeper",
+        title: "Pair Programming Timer",
         timer: {
             oneMin: "1 min",
             tenMin: "10 min",
             fiftyMin: "50 min",
-            oneHour: "1 hour"
+            oneHour: "1 hour",
+            customPlaceholder: "custom seconds"
         },
         buttons: {
             start: "Start",
@@ -15,7 +16,7 @@ const translations = {
         },
         help: {
             link: "Help / About",
-            title: "Pair Programming Timekeeper",
+            title: "Pair Programming Timer",
             paragraph1: "The app offers flexible time intervals catering to the dynamic nature of pair programming sessions.",
             paragraph2: "Users can choose from intervals of 1 minute, 10 minutes, 50 minutes, and 1 hour to structure their collaborative coding sessions.",
             paragraph3: "Pair programming sessions often benefit from periodic breaks to maintain productivity and engagement.",
@@ -26,12 +27,13 @@ const translations = {
         }
     },
     ja: {
-        title: "ペアプログラミングタイムキーパー",
+        title: "Pair Programming Timer",
         timer: {
             oneMin: "1分",
             tenMin: "10分",
             fiftyMin: "50分",
-            oneHour: "1時間"
+            oneHour: "1時間",
+            customPlaceholder: "秒数を入力"
         },
         buttons: {
             start: "開始",
@@ -41,7 +43,7 @@ const translations = {
         },
         help: {
             link: "ヘルプ / 概要",
-            title: "ペアプログラミングタイムキーパー",
+            title: "Pair Programming Timer",
             paragraph1: "このアプリは、ペアプログラミングセッションの動的な性質に対応する柔軟な時間間隔を提供します。",
             paragraph2: "ユーザーは1分、10分、50分、1時間の間隔から選択して、共同コーディングセッションを構成できます。",
             paragraph3: "ペアプログラミングセッションは、生産性とエンゲージメントを維持するために定期的な休憩から恩恵を受けることがよくあります。",
@@ -52,12 +54,13 @@ const translations = {
         }
     },
     it: {
-        title: "Cronometro per Pair Programming",
+        title: "Pair Programming Timer",
         timer: {
             oneMin: "1 min",
             tenMin: "10 min",
             fiftyMin: "50 min",
-            oneHour: "1 ora"
+            oneHour: "1 ora",
+            customPlaceholder: "secondi personalizzati"
         },
         buttons: {
             start: "Inizia",
@@ -67,7 +70,7 @@ const translations = {
         },
         help: {
             link: "Aiuto / Informazioni",
-            title: "Cronometro per Pair Programming",
+            title: "Pair Programming Timer",
             paragraph1: "L'app offre intervalli di tempo flessibili che si adattano alla natura dinamica delle sessioni di pair programming.",
             paragraph2: "Gli utenti possono scegliere tra intervalli di 1 minuto, 10 minuti, 50 minuti e 1 ora per strutturare le loro sessioni di codifica collaborativa.",
             paragraph3: "Le sessioni di pair programming spesso beneficiano di pause periodiche per mantenere la produttività e l'impegno.",

@@ -2,7 +2,16 @@ import React from 'react'
 class TimerOptions extends React.Component {
     constructor(props) {
         super(props);
+        this.state = { customSeconds: '' };
     }
+
+    commitCustomSeconds() {
+        const val = parseInt(this.state.customSeconds, 10);
+        if (val > 0) {
+            this.props.onCountdownTimeChange(val);
+        }
+    }
+
     render() {
         if (this.props.status === 'default') {
             const t = this.props.translations.timer;
@@ -28,6 +37,16 @@ class TimerOptions extends React.Component {
                     <label htmlFor="timer-option-timeframe-4">
                         <input id="timer-option-timeframe-4" onChange={() => this.props.onCountdownTimeChange(3600)}
                                className="form-radio" type="radio" name="count-value" value="60"/> {t.oneHour}</label>
+                    <input
+                        type="number"
+                        min="1"
+                        className="custom-seconds-input"
+                        placeholder={t.customPlaceholder}
+                        value={this.state.customSeconds}
+                        onChange={(e) => this.setState({ customSeconds: e.target.value })}
+                        onKeyDown={(e) => { if (e.key === 'Enter') this.commitCustomSeconds(); }}
+                        onBlur={() => this.commitCustomSeconds()}
+                    />
                 </div>
             );
         }

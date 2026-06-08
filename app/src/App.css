@@ -1,48 +1,16 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css);
+
 .App {
   text-align: center;
   width: 100%;
   max-width: 100%;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-/* --- */
-@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css);
-
 body, html {
   background: var(--background);
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
 }
 
 a,
@@ -66,8 +34,11 @@ a:hover {
 
 html,
 body {
-  height: 100%;
+  min-height: 100vh;
   background: var(--background);
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 body {
@@ -77,7 +48,7 @@ body {
   text-shadow: var(--textShadow);
   box-shadow: var(--bodyBoxShadow);
   overflow-x: hidden;
-  overflow-y: auto;
+  width: 100%;
 }
 
 .txt-shadow {
@@ -286,6 +257,37 @@ label
   padding: 6px;
 }
 
+.custom-seconds-input {
+  background: transparent;
+  border: 1px solid var(--dropdownBorder);
+  border-radius: 8px;
+  color: var(--textPrimary);
+  font: 300 16px/1.7 'Open Sans', sans-serif;
+  margin: 6px;
+  outline: none;
+  padding: 4px 10px;
+  width: 160px;
+}
+
+.custom-seconds-input::placeholder {
+  color: var(--textSecondary);
+  opacity: 0.7;
+}
+
+.custom-seconds-input:focus {
+  border-color: var(--radioCheckedBg);
+}
+
+/* hide browser spinner arrows */
+.custom-seconds-input::-webkit-outer-spin-button,
+.custom-seconds-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.custom-seconds-input[type=number] {
+  -moz-appearance: textfield;
+}
+
 .pulsate {
   transform: scale(1);
   animation: pulse 1s infinite;
@@ -490,6 +492,7 @@ code {
   justify-content: center;
   z-index: 1000;
   padding: 1rem;
+  -webkit-backdrop-filter: blur(4px);
   backdrop-filter: blur(4px);
   animation: fadeIn 0.2s ease-in-out;
 }
@@ -608,6 +611,7 @@ code {
   cursor: pointer;
   outline: none;
   transition: all 0.2s ease;
+  -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
@@ -675,6 +679,7 @@ code {
   cursor: pointer;
   outline: none;
   transition: all 0.2s ease;
+  -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
