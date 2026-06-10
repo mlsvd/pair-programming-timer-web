@@ -5,7 +5,6 @@ class TimerDisplay extends React.Component {
         super(props);
     }
     getStatusClassName() {
-        console.log(this.props.currentSecond);
         if (this.props.currentSecond <= 3) {
             return 'time-left pulsate';
         }

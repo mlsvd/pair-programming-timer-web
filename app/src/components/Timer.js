@@ -97,13 +97,12 @@ class Timer extends React.Component {
     }
 
     changeCountdownTimeInSeconds(seconds) {
-        this.setState({countdownTimeInSeconds: seconds});
-        this.setState({currentSecond: this.state.countdownTimeInSeconds});
+        this.setState({countdownTimeInSeconds: seconds, currentSecond: seconds});
     }
 
     render() {
         return (
-            <div id="counter-value-placeholder">
+            <div>
                 <TimerDisplay currentSecond={this.state.currentSecond} timerDisplayValue={this.state.timerDisplayValue} />
                 <TimerOptions
                     status={this.state.status}

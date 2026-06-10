@@ -1,9 +1,6 @@
 import React from "react";
 
 class TimerControls extends React.Component {
-    test() {
-        console.log(1);
-    }
     render() {
         const t = this.props.translations.buttons;
 

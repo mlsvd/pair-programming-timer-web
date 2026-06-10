@@ -5,7 +5,8 @@ const translations = {
             oneMin: "1 min",
             tenMin: "10 min",
             fiftyMin: "50 min",
-            oneHour: "1 hour"
+            oneHour: "1 hour",
+            customPlaceholder: "custom seconds"
         },
         buttons: {
             start: "Start",
@@ -31,7 +32,8 @@ const translations = {
             oneMin: "1分",
             tenMin: "10分",
             fiftyMin: "50分",
-            oneHour: "1時間"
+            oneHour: "1時間",
+            customPlaceholder: "秒数を入力"
         },
         buttons: {
             start: "開始",
@@ -57,7 +59,8 @@ const translations = {
             oneMin: "1 min",
             tenMin: "10 min",
             fiftyMin: "50 min",
-            oneHour: "1 ora"
+            oneHour: "1 ora",
+            customPlaceholder: "secondi personalizzati"
         },
         buttons: {
             start: "Inizia",

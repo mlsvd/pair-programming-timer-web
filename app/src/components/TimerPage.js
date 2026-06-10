@@ -7,17 +7,21 @@ import ThemeSelector from "./ThemeSelector";
 import translations from "../translations";
 import themes from "../themes";
 
+function readStorage(key, fallback) {
+    try { return localStorage.getItem(key) || fallback; } catch { return fallback; }
+}
+
+function writeStorage(key, value) {
+    try { localStorage.setItem(key, value); } catch { /* Safari private mode */ }
+}
+
 class TimerPage extends React.Component {
     constructor(props) {
         super(props);
-        // Load saved language from localStorage or default to 'en'
-        const savedLanguage = localStorage.getItem('appLanguage') || 'en';
-        // Load saved theme from localStorage or default to 'dark'
-        const savedTheme = localStorage.getItem('appTheme') || 'dark';
         this.state = {
             isModalOpen: false,
-            currentLanguage: savedLanguage,
-            currentTheme: savedTheme
+            currentLanguage: readStorage('appLanguage', 'en'),
+            currentTheme: readStorage('appTheme', 'dark')
         };
     }
 
@@ -35,12 +39,12 @@ class TimerPage extends React.Component {
 
     handleLanguageChange(languageCode) {
         this.setState({ currentLanguage: languageCode });
-        localStorage.setItem('appLanguage', languageCode);
+        writeStorage('appLanguage', languageCode);
     }
 
     handleThemeChange(themeId) {
         this.setState({ currentTheme: themeId });
-        localStorage.setItem('appTheme', themeId);
+        writeStorage('appTheme', themeId);
         this.applyTheme(themeId);
     }
 
