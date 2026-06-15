@@ -51,6 +51,11 @@ class HelpModal extends React.Component {
                                 lineHeight: '1.6',
                                 margin: '0'
                             }}>{t.paragraph4}</p>
+                            <p style={{
+                                fontSize: 'clamp(14px, 2vw, 16px)',
+                                lineHeight: '1.6',
+                                margin: '0'
+                            }}>{t.paragraph5}</p>
                         </div>
                     </div>
                 </div>

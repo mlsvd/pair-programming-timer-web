@@ -15,9 +15,12 @@ class Timer extends React.Component {
         }
     }
     startTimer() {
-        this.setState({currentSecond: this.state.countdownTimeInSeconds});
-        this.setState({status: 'started'});
-        this.setState({timerDisplayValue: this.timeToDisplayValue()});
+        const seconds = this.state.countdownTimeInSeconds;
+        this.setState({
+            currentSecond: seconds,
+            status: 'started',
+            timerDisplayValue: this.formatSeconds(seconds)
+        });
         this.startTicking();
     }
     pauseTimer() {
@@ -66,10 +69,10 @@ class Timer extends React.Component {
             this.setState({status: 'finished'});
         }
 
-        this.setState({timerDisplayValue: this.timeToDisplayValue()})
+        this.setState({timerDisplayValue: this.formatSeconds(this.state.currentSecond)})
     }
-    timeToDisplayValue() {
-        var timeDTO = this.transformSecondsToTimeDTO(this.state.currentSecond);
+    formatSeconds(totalSeconds) {
+        var timeDTO = this.transformSecondsToTimeDTO(totalSeconds);
         var valuesArray = [];
         if (timeDTO.hours > 0) {
             valuesArray.push(timeDTO.hours);
@@ -97,14 +100,13 @@ class Timer extends React.Component {
     }
 
     changeCountdownTimeInSeconds(seconds) {
-        this.setState({countdownTimeInSeconds: seconds});
-        this.setState({currentSecond: this.state.countdownTimeInSeconds});
+        this.setState({ countdownTimeInSeconds: seconds, currentSecond: seconds });
     }
 
     render() {
         return (
             <div id="counter-value-placeholder">
-                <TimerDisplay currentSecond={this.state.currentSecond} timerDisplayValue={this.state.timerDisplayValue} />
+                <TimerDisplay currentSecond={this.state.currentSecond} timerDisplayValue={this.state.timerDisplayValue} status={this.state.status} />
                 <TimerOptions
                     status={this.state.status}
                     onCountdownTimeChange={(seconds) => this.changeCountdownTimeInSeconds(seconds)}
