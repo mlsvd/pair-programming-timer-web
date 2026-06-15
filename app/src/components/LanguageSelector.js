@@ -4,8 +4,12 @@ class LanguageSelector extends React.Component {
     render() {
         const languages = [
             { code: 'en', name: 'English', flag: '🇬🇧' },
-            { code: 'ja', name: '日本語', flag: '🇯🇵' },
-            { code: 'it', name: 'Italiano', flag: '🇮🇹' }
+            { code: 'da', name: 'Dansk', flag: '🇩🇰' },
+            { code: 'sv', name: 'Svenska', flag: '🇸🇪' },
+            { code: 'no', name: 'Norsk', flag: '🇳🇴' },
+            { code: 'fi', name: 'Suomi', flag: '🇫🇮' },
+            { code: 'it', name: 'Italiano', flag: '🇮🇹' },
+            { code: 'ja', name: '日本語', flag: '🇯🇵' }
         ];
 
         return (
